@@ -12,7 +12,7 @@
                             <asp:Label ID="EstudianteIdLB" runat="server" CssClass="input-group-text">Estudiante ID</asp:Label>
                         </div>
                         <asp:TextBox ID="EstudianteIdTextBox" TextMode="Number" PlaceHolder="0" runat="server" CssClass="form-control col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" aria-describedby="EstudianteIdLB"></asp:TextBox>
-                        <button id="BuscarButton" runat="server" onserverclick="BuscarButton_ServerClick" title="Buscar" class="btn btn-info btn-sm-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
+                        <button id="BuscarButton" runat="server" onserverclick="BuscarButton_Click" title="Buscar" class="btn btn-info btn-sm-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>

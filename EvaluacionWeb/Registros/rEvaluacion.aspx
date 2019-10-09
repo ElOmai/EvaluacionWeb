@@ -12,7 +12,7 @@
                             <asp:Label ID="EvaluacionIdLB" runat="server" CssClass="input-group-text">Evaluacion ID</asp:Label>
                         </div>
                         <asp:TextBox ID="EvaluacionIdTextBox" TextMode="Number" PlaceHolder="0" runat="server" CssClass="form-control col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" aria-describedby="EvaluacionIdLB"></asp:TextBox>
-                        <button id="BuscarButton" runat="server" onserverclick="BuscarButton_ServerClick" title="Buscar" class="btn btn-info btn-sm-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
+                        <button id="BuscarButton" runat="server" onserverclick="BuscarButton_Click" title="Buscar" class="btn btn-info btn-sm-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
@@ -51,7 +51,7 @@
                             <asp:Label ID="LogradoLb" runat="server" CssClass="input-group-text">Logrado</asp:Label>
                         </div>
                         <asp:TextBox ID="LogradoTextBox" TextMode="Number" PlaceHolder="0" runat="server" CssClass="form-control col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" aria-describedby="LogradoLb"></asp:TextBox>
-                        <asp:Button ID="AgregarDetalle" runat="server" OnClick="AgregarDetalle_Click" Text="Agregar" CssClass="btn btn-outline-info text-black-50" />
+                        <asp:Button ID="AgregarButton" runat="server" OnClick="AgregarButton_Click" Text="Agregar" CssClass="btn btn-outline-info text-black-50" />
                     </div>
                 </div>
                 <asp:ScriptManager ID="ScriptManger" runat="server"></asp:ScriptManager>

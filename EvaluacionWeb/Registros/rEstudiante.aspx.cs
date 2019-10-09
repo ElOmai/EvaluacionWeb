@@ -57,7 +57,7 @@ namespace EvaluacionWeb.Registros
             RepositorioBase<Estudiante> repositorio = new RepositorioBase<Estudiante>();
             return !(repositorio.Buscar(EstudianteIdTextBox.Text.ToInt()).EsNulo());
         }
-        protected void BuscarButton_ServerClick(object sender, EventArgs e)
+        protected void BuscarButton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Estudiante> repositorio = new RepositorioBase<Estudiante>();
             if (!ExisteEnLaBaseDeDatos())

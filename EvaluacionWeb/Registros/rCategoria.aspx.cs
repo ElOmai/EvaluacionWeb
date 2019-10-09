@@ -122,7 +122,7 @@ namespace EvaluacionWeb.Registros
             repositorio.Dispose();
         }
 
-        protected void BuscarButton_ServerClick(object sender, EventArgs e)
+        protected void BuscarButton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Categoria> repositorio = new RepositorioBase<Categoria>();
             if (!ExisteEnLaBaseDeDatos())
