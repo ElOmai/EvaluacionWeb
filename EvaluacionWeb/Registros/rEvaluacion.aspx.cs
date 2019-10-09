@@ -154,13 +154,13 @@ namespace EvaluacionWeb.Registros
             }
             repositorio.Dispose();
         }
-        protected void AgregarDetalle_Click(object sender, EventArgs e)
+        protected void AgregarButton_Click(object sender, EventArgs e)
         {
 
             Evaluacion evaluaciones = ViewStateEvaluaciones();
             decimal Valor = ValorTextBox.Text.ToDecimal();
             decimal Logrado = LogradoTextBox.Text.ToDecimal();
-            evaluaciones.AgregarDetalle(0, evaluaciones.EvaluacionID, CategoriaDropDownList.SelectedValue.ToInt(),
+            evaluaciones.AgregarButton(0, evaluaciones.EvaluacionID, CategoriaDropDownList.SelectedValue.ToInt(),
                                         Valor, Logrado, Valor - Logrado);
             ViewState[KeyViewState] = evaluaciones;
             this.BindGrid();

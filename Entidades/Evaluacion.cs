@@ -37,7 +37,7 @@ namespace Entidades
             TotalPerdido = 0;
             EvaluacionDetalle = new List<EvaluacionDetalle>();
         }
-        public void AgregarDetalle(int detalleID, int evaluacionID, int categoriaId, decimal valor, decimal logrado, decimal perdido)
+        public void AgregarButton(int detalleID, int evaluacionID, int categoriaId, decimal valor, decimal logrado, decimal perdido)
         {
             EvaluacionDetalle.Add(new EvaluacionDetalle(detalleID, evaluacionID, categoriaId, valor, logrado, perdido));
         }

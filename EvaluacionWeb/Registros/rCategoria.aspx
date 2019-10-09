@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="rCategoria.aspx.cs" Inherits="EvaluacionWeb.Registros.rCategoria" %>
+﻿<%@ Page Title="Registro de Categorias" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="rCategoria.aspx.cs" Inherits="EvaluacionWeb.Registros.rCategoria" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" runat="server">
 <div class="container">
         <div class="card ">
-            <div class="card-header bg-dark text-white text-center "><strong><%:Page.Title %></strong></div>
+            <div class="card-header bg-white text-black text-center "><strong><%:Page.Title %></strong></div>
             <div class="card-body">
                 <div class="row justify-content-between">
                     <div class="input-group mb-2">
