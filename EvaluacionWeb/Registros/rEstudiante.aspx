@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" runat="server">
 <div class="container">
         <div class="card">
-            <div class="card-header bg-white text-dark text-center"><strong><%:Page.Title %></strong></div>
+            <div class="card-header bg-dark text-white text-center"><strong><%:Page.Title %></strong></div>
             <div class="card-body justify-content-center align-items-center">
                 <div class="row ">
                     <div class="input-group mb-2">

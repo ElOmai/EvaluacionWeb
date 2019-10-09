@@ -132,13 +132,13 @@ namespace EvaluacionWeb.Registros
         protected global::System.Web.UI.WebControls.TextBox LogradoTextBox;
 
         /// <summary>
-        /// AgregarButton control.
+        /// AgregarDetalle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AgregarButton;
+        protected global::System.Web.UI.WebControls.Button AgregarDetalle;
 
         /// <summary>
         /// ScriptManger control.
@@ -166,6 +166,24 @@ namespace EvaluacionWeb.Registros
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView DetalleGridView;
+
+        /// <summary>
+        /// TotalPerdidoLB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TotalPerdidoLB;
+
+        /// <summary>
+        /// TotalPerdidoTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TotalPerdidoTextBox;
 
         /// <summary>
         /// NuevoButton control.

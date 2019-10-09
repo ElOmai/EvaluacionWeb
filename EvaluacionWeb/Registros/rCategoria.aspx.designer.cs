@@ -87,6 +87,24 @@ namespace EvaluacionWeb.Registros
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVDescripcionTextBox;
 
         /// <summary>
+        /// PromediojeLB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PromediojeLB;
+
+        /// <summary>
+        /// PromedioTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PromedioTextBox;
+
+        /// <summary>
         /// NuevoButton control.
         /// </summary>
         /// <remarks>

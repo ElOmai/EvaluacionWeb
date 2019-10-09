@@ -16,6 +16,19 @@ namespace EvaluacionWeb.Registros
             if (!Page.IsPostBack)
             {
                 FechaTextBox.Text = DateTime.Now.ToFormatDate();
+                Limpiar();
+                int id = Request.QueryString["CategoriaID"].ToInt();
+                if (id > 0)
+                {
+                    using (RepositorioBase<Categoria> repositorio = new RepositorioBase<Categoria>())
+                    {
+                        Categoria Categoria = repositorio.Buscar(id);
+                        if (Categoria.EsNulo())
+                            Utils.Alerta(this, TipoTitulo.Informacion, TiposMensajes.RegistroNoEncontrado, IconType.info);
+                        else
+                            LlenaCampos(Categoria);
+                    }
+                }
             }
         }
         public void Limpiar()
@@ -23,6 +36,7 @@ namespace EvaluacionWeb.Registros
             CategoriaIdTextBox.Text = 0.ToString();
             FechaTextBox.Text = DateTime.Now.ToFormatDate();
             DescripcionTextBox.Text = string.Empty;
+            PromedioTextBox.Text = 0.ToString();
         }
         public Categoria LlenarClase()
         {
@@ -36,6 +50,7 @@ namespace EvaluacionWeb.Registros
             CategoriaIdTextBox.Text = categorias.CategoriaId.ToString();
             FechaTextBox.Text = categorias.Fecha.ToFormatDate();
             DescripcionTextBox.Text = categorias.Descripcion;
+            PromedioTextBox.Text = categorias.PromedioPerdida.ToString();
         }
         public bool Validar()
         {
@@ -47,8 +62,10 @@ namespace EvaluacionWeb.Registros
         }
         public bool ExisteEnLaBaseDeDatos()
         {
-            RepositorioBase<Categoria> repositorio = new RepositorioBase<Categoria>();
-            return !(repositorio.Buscar(CategoriaIdTextBox.Text.ToInt()).EsNulo());
+            using (RepositorioBase<Categoria> repositorio = new RepositorioBase<Categoria>())
+            {
+                return !(repositorio.Buscar(CategoriaIdTextBox.Text.ToInt()).EsNulo());
+            }
         }
         protected void NuevoButton_Click(object sender, EventArgs e)
         {

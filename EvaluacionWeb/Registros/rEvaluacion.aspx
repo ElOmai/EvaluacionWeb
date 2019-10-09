@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" runat="server">
 <div class="container">
         <div class="card">
-            <div class="card-header bg-white text-Dark text-center"><strong><%:Page.Title %></strong></div>
+            <div class="card-header bg-white text-dark text-center"><strong><%:Page.Title %></strong></div>
             <div class="card-body justify-content-center align-items-center">
                 <div class="row ">
                     <div class="input-group mb-2">
@@ -51,7 +51,7 @@
                             <asp:Label ID="LogradoLb" runat="server" CssClass="input-group-text">Logrado</asp:Label>
                         </div>
                         <asp:TextBox ID="LogradoTextBox" TextMode="Number" PlaceHolder="0" runat="server" CssClass="form-control col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" aria-describedby="LogradoLb"></asp:TextBox>
-                        <asp:Button ID="AgregarButton" runat="server" OnClick="AgregarButton_Click" Text="Agregar" CssClass="btn btn-outline-info text-black-50" />
+                        <asp:Button ID="AgregarDetalle" runat="server" OnClick="AgregarDetalle_Click" Text="Agregar" CssClass="btn btn-outline-info text-black-50" />
                     </div>
                 </div>
                 <asp:ScriptManager ID="ScriptManger" runat="server"></asp:ScriptManager>
@@ -69,7 +69,7 @@
                                         <asp:TemplateField ShowHeader="False" HeaderText="Opciones">
                                             <ItemTemplate>
                                                 <asp:Button ID="RemoverDetalleClick" runat="server" CausesValidation="false" CommandName="Select"
-                                                    Text="Remover" class="btn btn-danger btn-sm" OnClick="RemoverDetalleClick_Click" />
+                                                    Text="Remover" CssClass="btn btn-danger btn-sm" OnClick="RemoverDetalleClick_Click" />
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                         <asp:BoundField HeaderText="DetalleID" DataField="DetalleID" Visible="false" />
@@ -90,6 +90,12 @@
                         <asp:AsyncPostBackTrigger ControlID="DetalleGridView" />
                     </Triggers>
                 </asp:UpdatePanel>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <asp:Label ID="TotalPerdidoLB" runat="server" CssClass="input-group-text">TotalPerdido</asp:Label>
+                    </div>
+                    <asp:TextBox ID="TotalPerdidoTextBox" Enabled="false" AutoPostBack="true" TextMode="Number" PlaceHolder="0" runat="server" CssClass="form-control col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3" aria-describedby="TotalPerdidoLB"></asp:TextBox>
+                </div>
             </div>
             <div class="card-footer">
                 <div class="text-center">

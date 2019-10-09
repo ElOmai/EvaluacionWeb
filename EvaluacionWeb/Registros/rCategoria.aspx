@@ -3,10 +3,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" runat="server">
 <div class="container">
-        <div class="card ">
-            <div class="card-header bg-white text-black text-center "><strong><%:Page.Title %></strong></div>
-            <div class="card-body">
-                <div class="row justify-content-between">
+        <div class="card">
+            <div class="card-header bg-white text-dark text-center "><strong><%:Page.Title %></strong></div>
+            <div class="card-body text-center">
+                <div class="form-group" display: inline-block>
                     <div class="input-group mb-2">
                         <div class="input-group-prepend">
                             <asp:Label ID="CategoriaIdLB" runat="server" CssClass="input-group-text">Categoria ID</asp:Label>
@@ -16,15 +16,15 @@
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
-                    <div class="input-group mb-2">
+                    <div class="input-group">
                         <div class="input-group-prepend">
                             <asp:Label ID="FechaLB" runat="server" CssClass="input-group-text">Fecha</asp:Label>
                         </div>
                         <asp:TextBox ID="FechaTextBox" TextMode="Date" runat="server" CssClass="form-control col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" aria-describedby="FechaLB" Visible="true"></asp:TextBox>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="input-group mb-2">
+                <div class="form-group" display: inline-block>
+                    <div class="input-group ">
                         <div class="input-group-prepend">
                             <asp:Label ID="DescripcionLb" runat="server" CssClass="input-group-text">Descripcion</asp:Label>
                         </div>
@@ -38,17 +38,25 @@
                         </asp:RequiredFieldValidator>
                     </div>
                 </div>
-            </div>
-            <div class="card-footer">
-                <div class="text-center">
-                    <div class="form-group" display: inline-block>
-                        <asp:Button Text="Nuevo" CssClass="btn btn-warning btn-lg-4 btn-sm-4" runat="server" ID="NuevoButton" OnClick="NuevoButton_Click"  />
-                        <asp:Button Text="Guardar" CssClass="btn btn-success btn-lg-4 btn-sm-4" runat="server" ID="GuadarButton" OnClick="GuadarButton_Click" />
-                        <asp:Button Text="Eliminar" CssClass="btn btn-danger btn-lg-4 btn-sm-4" runat="server" ID="EliminarButton" OnClick="EliminarButton_Click" />
+                <div class="form-group" display: inline-block>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <asp:Label ID="PromediojeLB" runat="server" CssClass="input-group-text">Porcentaje</asp:Label>
+                        </div>
+                        <asp:TextBox ID="PromedioTextBox" Enabled="false" TextMode="Number" runat="server" CssClass="form-control input-sm col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" aria-describedby="PromediojeLB" Visible="true"></asp:TextBox>
                     </div>
                 </div>
             </div>
+        <div class="card-footer">
+            <div class="text-center">
+                <div class="form-group" display: inline-block>
+                    <asp:Button Text="Nuevo" CssClass="btn btn-warning btn-lg-4 btn-sm-4" runat="server" ID="NuevoButton" OnClick="NuevoButton_Click" />
+                    <asp:Button Text="Guardar" CssClass="btn btn-success btn-lg-4 btn-sm-4" runat="server" ID="GuadarButton" OnClick="GuadarButton_Click" />
+                    <asp:Button Text="Eliminar" CssClass="btn btn-danger btn-lg-4 btn-sm-4" runat="server" ID="EliminarButton" OnClick="EliminarButton_Click" />
+                </div>
+            </div>
         </div>
+    </div>
     </div>
 </asp:Content>
 
