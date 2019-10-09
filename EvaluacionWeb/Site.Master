@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EvaluacionWeb.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet">
+   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Scripts/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/Scripts/popper.min.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/sweetalert.min.js"></script>
+    <script type="text/javascript" src="/Scripts/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        function sweetalert(Title, Text, icon, Button) {
+            Swal.fire({
+                title: Title,
+                text: Text,
+                type: icon,
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        function ToastSweetAlert(Type, Titulo) {
+
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000
+            });
+            Toast.fire({
+                type: Type,
+                title: Titulo
+            });
+        }
+    </script>
+
+    <title><%: Page.Title %> - EvaluacionWeb</title>
+
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" runat="server" href="~/">EstudiantesApp</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" runat="server" href="Default.aspx">Pagina de Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="RegistrosNavbarDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registros
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" runat="server" href="Registros/rCategoria.aspx">Categorias</a>
+                                <a class="dropdown-item" runat="server" href="Registros/rEstudiante.aspx">Estudiantes</a>
+                                <a class="dropdown-item" runat="server" href="Registros/rEvaluacion.aspx">Evaluaciones</a>
+                                
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultas
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="ConsultasNavbarDropDown">
+                                <a class="dropdown-item" runat="server" href="#">Estudiantes</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="Main" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - EvaluacionWeb</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
