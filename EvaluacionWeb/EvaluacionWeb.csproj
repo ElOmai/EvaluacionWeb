@@ -81,6 +81,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Global.asax" />
+    <Content Include="Registros\rCategoria.aspx" />
+    <Content Include="Registros\rEstudiante.aspx" />
+    <Content Include="Registros\rEvaluacion.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -123,6 +126,27 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registros\rCategoria.aspx.cs">
+      <DependentUpon>rCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rCategoria.aspx.designer.cs">
+      <DependentUpon>rCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\rEstudiante.aspx.cs">
+      <DependentUpon>rEstudiante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rEstudiante.aspx.designer.cs">
+      <DependentUpon>rEstudiante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\rEvaluacion.aspx.cs">
+      <DependentUpon>rEvaluacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rEvaluacion.aspx.designer.cs">
+      <DependentUpon>rEvaluacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -164,7 +188,17 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Consultas\" />
-    <Folder Include="Registros\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{FB1AA4E0-5EB9-4053-BDD5-CDD984743BD5}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{33642194-BF0B-43FF-93E5-32758E373C26}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
