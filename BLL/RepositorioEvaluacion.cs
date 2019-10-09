@@ -1,24 +1,21 @@
 ﻿using DAL;
 using Entidades;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class RepositorioEvaluacion : RepositorioBase<Evaluaciones>
+    public class RepositorioEvaluacion : RepositorioBase<Evaluacion>
     {
-        public override Evaluaciones Buscar(int id)
+        public override Evaluacion Buscar(int id)
         {
-            Evaluaciones Evaluaciones = new Evaluaciones();
+            Evaluacion Evaluaciones = new Evaluacion();
             Contexto db = new Contexto();
             try
             {
 
-                Evaluaciones = db.Evaluaciones.Include(x => x.DetalleEvaluaciones)
+                Evaluaciones = db.Evaluaciones.Include(x => x.EvaluacionDetalle)
                     .Where(x => x.EvaluacionID == id).FirstOrDefault();
             }
             catch (Exception)
@@ -27,25 +24,25 @@ namespace BLL
             { db.Dispose(); }
             return Evaluaciones;
         }
-        public override bool Modificar(Evaluaciones entity)
+        public override bool Modificar(Evaluacion entity)
         {
             bool paso = false;
-            Evaluaciones Anterior = Buscar(entity.EvaluacionID);
+            Evaluacion Anterior = Buscar(entity.EvaluacionID);
             Contexto db = new Contexto();
             try
             {
                 using (Contexto contexto = new Contexto())
                 {
-                    foreach (var item in Anterior.DetalleEvaluaciones.ToList())
+                    foreach (var item in Anterior.EvaluacionDetalle.ToList())
                     {
-                        if (!entity.DetalleEvaluaciones.Exists(x => x.DetalleID == item.DetalleID))
+                        if (!entity.EvaluacionDetalle.Exists(x => x.DetalleID == item.DetalleID))
                         {
                             contexto.Entry(item).State = EntityState.Deleted;
                         }
                     }
                     contexto.SaveChanges();
                 }
-                foreach (var item in entity.DetalleEvaluaciones)
+                foreach (var item in entity.EvaluacionDetalle)
                 {
                     var estado = EntityState.Unchanged;
                     if (item.DetalleID == 0)

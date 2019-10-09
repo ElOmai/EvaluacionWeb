@@ -16,18 +16,18 @@ namespace Entidades
         public DateTime Fecha { get; set; }
         public int EstudianteId { get; set; }
         [ForeignKey("EstudianteId")]
-        public virtual Estudiantes Estudiantes { get; set; }
+        public virtual Estudiante Estudiantes { get; set; }
         public decimal TotalPerdido { get; set; }
-        public virtual List<DetalleEvaluacion> DetalleEvaluacion { get; set; }
+        public virtual List<EvaluacionDetalle> EvaluacionDetalle { get; set; }
 
         public Evaluacion(int evaluacionID, DateTime fecha, int estudianteId, decimal totalPerdido)
         {
             EvaluacionID = evaluacionID;
             Fecha = fecha;
             EstudianteId = estudianteId;
-            Estudiantes = new Estudiantes();
+            Estudiantes = new Estudiante();
             TotalPerdido = totalPerdido;
-            DetalleEvaluacion = new List<DetalleEvaluacion>();
+            EvaluacionDetalle = new List<EvaluacionDetalle>();
         }
         public Evaluacion()
         {
@@ -35,15 +35,15 @@ namespace Entidades
             Fecha = DateTime.Now;
             EstudianteId = 0;
             TotalPerdido = 0;
-            DetalleEvaluacion = new List<DetalleEvaluacion>();
+            EvaluacionDetalle = new List<EvaluacionDetalle>();
         }
         public void AgregarDetalle(int detalleID, int evaluacionID, int categoriaId, decimal valor, decimal logrado, decimal perdido)
         {
-            DetalleEvaluacion.Add(new DetalleEvaluacion(detalleID, evaluacionID, categoriaId, valor, logrado, perdido));
+            EvaluacionDetalle.Add(new EvaluacionDetalle(detalleID, evaluacionID, categoriaId, valor, logrado, perdido));
         }
         public void RemoverDetalle(int index)
         {
-            this.DetalleEvaluacion.RemoveAt(index);
+            this.EvaluacionDetalle.RemoveAt(index);
         }
     }
 
