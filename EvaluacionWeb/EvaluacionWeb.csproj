@@ -284,6 +284,8 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reportes\ReporteCategoria.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteEstudiante.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteEvaluacion.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

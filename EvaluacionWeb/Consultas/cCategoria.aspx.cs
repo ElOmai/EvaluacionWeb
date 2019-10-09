@@ -81,11 +81,11 @@ namespace EvaluacionWeb.Consultas
         }
         protected void ImprimirButton_Click(object sender, EventArgs e)
         {
-            ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "Popup", $"ShowReporte('Listado de Categoria');", true);
+            ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "Popup", $"ShowReporte('Reporte de Categoria');", true);
 
             CategoriasReportViewer.ProcessingMode = Microsoft.Reporting.WebForms.ProcessingMode.Local;
             CategoriasReportViewer.Reset();
-            CategoriasReportViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\ListadoCategoria.rdlc");
+            CategoriasReportViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\ReporteCategoria.rdlc");
             CategoriasReportViewer.LocalReport.DataSources.Clear();
 
             CategoriasReportViewer.LocalReport.DataSources.Add(new ReportDataSource("Categoria",

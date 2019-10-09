@@ -113,11 +113,11 @@ namespace EvaluacionWeb.Consultas
 
         protected void ImprimirButton_Click(object sender, EventArgs e)
         {
-            ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "Popup", $"ShowReporte('Listado de Evaluaciones');", true);
+            ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "Popup", $"ShowReporte('Reporte de Evaluaciones');", true);
 
             EvaluacionesReportViewer.ProcessingMode = Microsoft.Reporting.WebForms.ProcessingMode.Local;
             EvaluacionesReportViewer.Reset();
-            EvaluacionesReportViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\ListadoEvaluaciones.rdlc");
+            EvaluacionesReportViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\ReporteEvaluaciones.rdlc");
             EvaluacionesReportViewer.LocalReport.DataSources.Clear();
 
             EvaluacionesReportViewer.LocalReport.DataSources.Add(new ReportDataSource("Evaluaciones",

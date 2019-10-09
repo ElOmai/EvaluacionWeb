@@ -82,11 +82,11 @@ namespace EvaluacionWeb.Consultas
 
         protected void ImprimirButton_Click(object sender, EventArgs e)
         {
-            ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "Popup", $"ShowReporte('Listado de Estudiantes');", true);
+            ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "Popup", $"ShowReporte('Reporte de Estudiantes');", true);
 
             EstudiantesReportViewer.ProcessingMode = Microsoft.Reporting.WebForms.ProcessingMode.Local;
             EstudiantesReportViewer.Reset();
-            EstudiantesReportViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\ListadoEstudiantes.rdlc");
+            EstudiantesReportViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\ReporteEstudiantes.rdlc");
             EstudiantesReportViewer.LocalReport.DataSources.Clear();
 
             EstudiantesReportViewer.LocalReport.DataSources.Add(new ReportDataSource("Estudiantes",
