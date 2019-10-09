@@ -90,8 +90,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Consultas\cCategoria.aspx" />
-    <Content Include="Consultas\cEstudiantes.aspx" />
-    <Content Include="Consultas\cEvaluaciones.aspx" />
+    <Content Include="Consultas\cEstudiante.aspx" />
+    <Content Include="Consultas\cEvaluacion.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -165,19 +165,19 @@
     <Compile Include="Consultas\cCategoria.aspx.designer.cs">
       <DependentUpon>cCategoria.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\cEstudiantes.aspx.cs">
-      <DependentUpon>cEstudiantes.aspx</DependentUpon>
+    <Compile Include="Consultas\cEstudiante.aspx.cs">
+      <DependentUpon>cEstudiante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Consultas\cEstudiantes.aspx.designer.cs">
-      <DependentUpon>cEstudiantes.aspx</DependentUpon>
+    <Compile Include="Consultas\cEstudiante.aspx.designer.cs">
+      <DependentUpon>cEstudiante.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\cEvaluaciones.aspx.cs">
-      <DependentUpon>cEvaluaciones.aspx</DependentUpon>
+    <Compile Include="Consultas\cEvaluacion.aspx.cs">
+      <DependentUpon>cEvaluacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Consultas\cEvaluaciones.aspx.designer.cs">
-      <DependentUpon>cEvaluaciones.aspx</DependentUpon>
+    <Compile Include="Consultas\cEvaluacion.aspx.designer.cs">
+      <DependentUpon>cEvaluacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
