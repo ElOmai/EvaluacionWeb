@@ -72,7 +72,9 @@
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultas
                             </a>
                             <div class="dropdown-menu" aria-labelledby="ConsultasNavbarDropDown">
-                                <a class="dropdown-item" runat="server" href="#">Estudiantes</a>
+                                <a class="dropdown-item" runat="server" href="Consultas/cCategorias.aspx">Categorias</a>
+                                <a class="dropdown-item" runat="server" href="Consultas/ConsultaEstudiantes.aspx">Estudiantes</a>
+                                <a class="dropdown-item" runat="server" href="Consultas/ConsultaEvaluaciones.aspx">Evaluaciones</a>
                             </div>
                         </li>
                     </ul>
