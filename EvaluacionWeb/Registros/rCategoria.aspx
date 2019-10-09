@@ -41,9 +41,9 @@
                 <div class="form-group" display: inline-block>
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <asp:Label ID="PromediojeLB" runat="server" CssClass="input-group-text">Porcentaje</asp:Label>
+                            <asp:Label ID="PrimedioLB" runat="server" CssClass="input-group-text">Promedio Perdida</asp:Label>
                         </div>
-                        <asp:TextBox ID="PromedioTextBox" Enabled="false" TextMode="Number" runat="server" CssClass="form-control input-sm col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" aria-describedby="PromediojeLB" Visible="true"></asp:TextBox>
+                        <asp:TextBox ID="PromedioTextBox" Enabled="false" TextMode="Number" runat="server" CssClass="form-control input-sm col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4" aria-describedby="PrimedioLB" Visible="true"></asp:TextBox>
                     </div>
                 </div>
             </div>
