@@ -75,12 +75,11 @@
                                     CellPadding="4" ForeColor="#333333" GridLines="None"
                                     AllowPaging="true" PageSize="6"
                                     OnPageIndexChanging="DatosGridView_PageIndexChanging">
-
                                     <AlternatingRowStyle BackColor="LightBlue" />
                                     <Columns>
                                         <asp:HyperLinkField ControlStyle-CssClass="btn btn-info"
                                             DataNavigateUrlFields="EvaluacionID"
-                                            DataNavigateUrlFormatString="~/Registros/RegistroEvaluaciones.aspx?EvaluacionID={0}"
+                                            DataNavigateUrlFormatString="~/Registros/rEvaluacion.aspx?EvaluacionID={0}"
                                             Text="Editar"></asp:HyperLinkField>
                                         <asp:TemplateField ShowHeader="False" HeaderText="Opciones">
                                             <ItemTemplate>

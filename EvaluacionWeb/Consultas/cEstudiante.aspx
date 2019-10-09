@@ -71,12 +71,11 @@
                                     CellPadding="4" ForeColor="#333333" GridLines="None"
                                     AllowPaging="true" PageSize="6"
                                     OnPageIndexChanging="DatosGridView_PageIndexChanging">
-
                                     <AlternatingRowStyle BackColor="LightBlue" />
                                     <Columns>
                                         <asp:HyperLinkField ControlStyle-CssClass="btn btn-info"
                                             DataNavigateUrlFields="EstudianteId"
-                                            DataNavigateUrlFormatString="~/Registros/RegistroEstudiante.aspx?EstudianteId={0}"
+                                            DataNavigateUrlFormatString="~/Registros/rEstudiante.aspx?EstudianteId={0}"
                                             Text="Editar"></asp:HyperLinkField>
                                         <asp:BoundField HeaderText="EstudianteId" DataField="EstudianteId" Visible="false" />
                                         <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
