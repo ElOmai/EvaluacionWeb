@@ -17,6 +17,7 @@ namespace Entidades
         public int EstudianteId { get; set; }
         [ForeignKey("EstudianteId")]
         public virtual Estudiante Estudiantes { get; set; }
+        public string NombreEstudiante { get; set; }
         public decimal TotalPerdido { get; set; }
         public virtual List<EvaluacionDetalle> EvaluacionDetalle { get; set; }
 
@@ -25,6 +26,7 @@ namespace Entidades
             EvaluacionID = evaluacionID;
             Fecha = fecha;
             EstudianteId = estudianteId;
+            NombreEstudiante = string.Empty;
             Estudiantes = new Estudiante();
             TotalPerdido = totalPerdido;
             EvaluacionDetalle = new List<EvaluacionDetalle>();
@@ -34,6 +36,7 @@ namespace Entidades
             EvaluacionID = 0;
             Fecha = DateTime.Now;
             EstudianteId = 0;
+            NombreEstudiante = string.Empty;
             TotalPerdido = 0;
             EvaluacionDetalle = new List<EvaluacionDetalle>();
         }
